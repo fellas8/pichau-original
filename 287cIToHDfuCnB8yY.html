@@ -1,0 +1,294 @@
+<html><head><base href="/" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pichau - Hardware e Periféricos</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --primary: #e0374c;
+  --secondary: #2d3436;
+}
+
+body {
+  background: #f5f6fa;
+}
+
+nav {
+  background: #000000;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 2rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.menu-bar {
+  background: #111;
+  padding: 0.5rem 0;
+}
+
+.menu-items {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.menu-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.products {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product-price {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.installment-price {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.buy-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+
+.buy-button:hover {
+  background: #c62f41;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .search-bar {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  
+  .menu-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="top-bar">
+      <div class="logo">PICHAU</div>
+      <div class="search-bar">
+        <input type="text" placeholder="O que você procura?">
+      </div>
+      <div class="cart-icon">
+        🛒
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="menu-bar">
+    <div class="menu-items">
+      <a href="https://www.pichau.com.br/hardware">HARDWARE</a>
+      <a href="https://www.pichau.com.br/computadores">COMPUTADORES</a>
+      <a href="https://www.pichau.com.br/perifericos">PERIFÉRICOS</a>
+      <a href="https://www.pichau.com.br/cadeiras">CADEIRAS</a>
+      <a href="https://www.pichau.com.br/monitores">MONITORES</a>
+    </div>
+  </div>
+
+  <div class="products">
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <rect x="20" y="30" width="110" height="90" fill="#dfe6e9"/>
+          <rect x="35" y="40" width="80" height="70" fill="#b2bec3"/>
+          <circle cx="75" cy="75" r="15" fill="#636e72"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">PC Gamer Pichau Gaya, AMD Ryzen 5 5600G</h3>
+        <p class="product-price">R$ 4.799,90</p>
+        <p class="installment-price">12x de R$ 399,99 sem juros</p>
+        <button class="buy-button">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <rect x="30" y="40" width="90" height="25" fill="#dfe6e9"/>
+          <rect x="35" y="45" width="80" height="15" fill="#b2bec3"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Teclado Mecânico Gamer Pichau P631 RGB</h3>
+        <p class="product-price">R$ 349,90</p>
+        <p class="installment-price">12x de R$ 29,16 sem juros</p>
+        <button class="buy-button">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <circle cx="75" cy="75" r="35" fill="#dfe6e9"/>
+          <circle cx="75" cy="75" r="25" fill="#b2bec3"/>
+          <rect x="70" y="40" width="10" height="30" fill="#636e72"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Mouse Gamer Pichau P801 RGB</h3>
+        <p class="product-price">R$ 159,90</p>
+        <p class="installment-price">12x de R$ 13,32 sem juros</p>
+        <button class="buy-button">COMPRAR</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const buyButtons = document.querySelectorAll('.buy-button');
+const cartCount = document.querySelector('.cart-count');
+let count = 0;
+
+buyButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    count++;
+    cartCount.textContent = count;
+    
+    const originalText = button.textContent;
+    button.textContent = 'ADICIONADO ✓';
+    button.style.background = '#2ecc71';
+    
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.style.background = '';
+    }, 1500);
+  });
+});
+
+document.querySelector('.search-bar input').addEventListener('keyup', function(e) {
+  if(e.key === 'Enter') {
+    alert('Pesquisando: ' + this.value);
+    this.value = '';
+  }
+});
+</script>
+
+</body></html>
